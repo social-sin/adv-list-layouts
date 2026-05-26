@@ -1,0 +1,253 @@
+/* =========================
+   GLOBAL STYLES
+========================= */
+
+body {
+  font-family: Arial, sans-serif;
+
+  background-color: #fef6e4;
+  color: #172c66;
+
+  margin: 0;
+  padding: 40px;
+
+  line-height: 1.6;
+}
+
+/* =========================
+   TYPOGRAPHY
+========================= */
+
+h1,
+h2 {
+  color: green;
+}
+
+h1 {
+  text-align: center;
+  font-size: 3rem;
+}
+
+.intro {
+  text-align: center;
+
+  max-width: 700px;
+  margin: 0 auto 2rem auto;
+}
+
+/* =========================
+   CARD LAYOUT
+========================= */
+
+.card {
+  background-color: white;
+
+  padding: 30px;
+  margin-bottom: 30px;
+
+  border: 3px solid #172c66;
+  border-radius: 12px;
+}
+
+/* =========================
+   BEFORE + AFTER
+========================= */
+
+.featured-title {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.featured-title::before {
+  content: "★ ";
+
+  color: gold;
+}
+
+.featured-title::after {
+  content: " ★";
+
+  color: gold;
+}
+
+/* =========================
+   BLOCKQUOTE
+========================= */
+
+blockquote {
+  font-size: 1.5rem;
+
+  max-width: 700px;
+  margin: 0 auto;
+
+  position: relative;
+
+  padding: 20px 40px;
+
+  font-style: italic;
+}
+
+blockquote::before {
+  content: open-quote;
+
+  font-size: 4rem;
+
+  color: #cccccc;
+
+  position: absolute;
+
+  left: 0;
+  top: -10px;
+}
+
+blockquote::after {
+  content: close-quote;
+
+  font-size: 4rem;
+
+  color: #cccccc;
+
+  position: absolute;
+
+  right: 0;
+  bottom: -40px;
+}
+
+/* =========================
+   TYPOGRAPHIC DIVIDER
+========================= */
+
+.section-heading {
+  text-align: center;
+  font-size: 2rem;
+}
+
+.section-heading::before,
+.section-heading::after {
+  content: "";
+
+  display: inline-block;
+
+  width: 40px;
+  height: 2px;
+
+  background: black;
+
+  margin: 0 10px;
+
+  vertical-align: middle;
+}
+
+/* =========================
+   CUSTOM LIST
+========================= */
+
+.custom-list {
+  list-style: none;
+  padding: 0;
+}
+
+.custom-list li {
+  margin-bottom: 1rem;
+}
+
+.custom-list li::before {
+  content: "➤";
+
+  color: #333;
+
+  margin-right: 10px;
+
+  font-weight: bold;
+}
+
+/* =========================
+   MARKER PSEUDO-ELEMENT
+========================= */
+
+.marker-list {
+  padding-left: 2rem;
+}
+
+.marker-list li::marker {
+  content: "◆ ";
+
+  color: crimson;
+
+  font-size: 1.2em;
+}
+
+/* =========================
+   TIMELINE
+========================= */
+
+.timeline {
+  position: relative;
+
+  list-style: none;
+
+  padding-left: 20px;
+}
+
+.timeline li {
+  position: relative;
+
+  margin-bottom: 1.5rem;
+
+  padding-left: 20px;
+}
+
+.timeline li::before {
+  content: "";
+
+  position: absolute;
+
+  left: -10px;
+  top: 8px;
+
+  width: 10px;
+  height: 10px;
+
+  background: black;
+
+  border-radius: 50%;
+}
+
+/* =========================
+   OVERLAY EFFECT
+========================= */
+
+.overlay-box {
+  position: relative;
+
+  width: 300px;
+  height: 120px;
+
+  margin: 0 auto;
+
+  background: white;
+
+  border: 3px solid #172c66;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  font-size: 1.5rem;
+  font-weight: bold;
+
+  overflow: hidden;
+}
+
+.overlay-box::before {
+  content: "";
+
+  position: absolute;
+
+  width: 120%;
+  height: 120%;
+
+  background: rgba(0, 128, 0, 0.15);
+
+  transform: rotate(-8deg);
+}
