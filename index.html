@@ -4,95 +4,115 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-  <title>Advanced CSS Pseudo-Elements</title>
+  <title>Advanced List Layouts</title>
 
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
 
   <header>
-    <h1 class="hero-title">
-      Advanced CSS Pseudo-Elements
-    </h1>
+    <h1>Advanced List Layouts</h1>
 
     <p class="intro">
-      Explore ::before, ::after, and ::marker for decorative typography,
-      custom bullets, dividers, and timeline layouts.
+      Explore Flexbox, Grid, CSS counters,
+      multi-column lists, icon alignment,
+      and nested list structures.
     </p>
   </header>
 
-  <!-- BEFORE + AFTER -->
+  <!-- FLEXBOX MENU -->
   <section class="card">
-    <h2>Decorative ::before & ::after</h2>
+    <h2>Flexbox Navigation Menu</h2>
 
-    <h3 class="featured-title">
-      Featured Projects
-    </h3>
-
-    <p>
-      Decorative symbols are added entirely with CSS —
-      no extra HTML needed.
-    </p>
-  </section>
-
-  <!-- BLOCKQUOTE -->
-  <section class="card">
-    <h2>Decorative Typography</h2>
-
-    <blockquote>
-      Design reveals the invisible.
-    </blockquote>
-  </section>
-
-  <!-- DIVIDER -->
-  <section class="card">
-    <h2>Typographic Divider</h2>
-
-    <h3 class="section-heading">
-      Gallery
-    </h3>
-  </section>
-
-  <!-- CUSTOM LIST -->
-  <section class="card">
-    <h2>Custom List Markers with ::before</h2>
-
-    <ul class="custom-list">
-      <li>Concept Development</li>
-      <li>Design Execution</li>
-      <li>Documentation</li>
+    <ul class="flex-menu">
+      <li>Home</li>
+      <li>About</li>
+      <li>Gallery</li>
+      <li>Contact</li>
     </ul>
   </section>
 
-  <!-- MARKER -->
+  <!-- GRID LIST -->
   <section class="card">
-    <h2>Custom Bullets with ::marker</h2>
+    <h2>Grid-Based List</h2>
 
-    <ul class="marker-list">
-      <li>Typography Systems</li>
-      <li>Editorial Layout</li>
-      <li>Visual Hierarchy</li>
+    <ul class="grid-list">
+      <li>Project 1</li>
+      <li>Project 2</li>
+      <li>Project 3</li>
+      <li>Project 4</li>
+      <li>Project 5</li>
+      <li>Project 6</li>
     </ul>
   </section>
 
-  <!-- TIMELINE -->
+  <!-- CSS COUNTERS -->
   <section class="card">
-    <h2>Minimalist Timeline</h2>
+    <h2>CSS Counter List</h2>
 
-    <ul class="timeline">
-      <li>2023 — Research</li>
-      <li>2024 — Prototype</li>
-      <li>2025 — Launch</li>
+    <ol class="counter-list">
+      <li>Planning</li>
+      <li>Research</li>
+      <li>Design</li>
+      <li>Execution</li>
+      <li>Review</li>
+    </ol>
+  </section>
+
+  <!-- MULTI COLUMN -->
+  <section class="card">
+    <h2>Multi-Column List</h2>
+
+    <ul class="multi-column">
+      <li>Apples</li>
+      <li>Bananas</li>
+      <li>Cherries</li>
+      <li>Dates</li>
+      <li>Grapes</li>
+      <li>Lemons</li>
+      <li>Mangoes</li>
+      <li>Peaches</li>
+      <li>Strawberries</li>
     </ul>
   </section>
 
-  <!-- OVERLAY -->
+  <!-- ICON ALIGNMENT -->
   <section class="card">
-    <h2>Creative Overlay Effect</h2>
+    <h2>Icon & Text Alignment</h2>
 
-    <div class="overlay-box">
-      Overlay Effect
-    </div>
+    <ul class="icon-list">
+      <li>Responsive Design</li>
+      <li>Accessible Navigation</li>
+      <li>Flexible Layout Systems</li>
+      <li>Modern CSS Workflows</li>
+    </ul>
+  </section>
+
+  <!-- NESTED LIST -->
+  <section class="card">
+    <h2>Nested Lists</h2>
+
+    <ul class="nested-list">
+      <li>
+        Design Principles
+
+        <ul>
+          <li>
+            Typography
+
+            <ul>
+              <li>Hierarchy</li>
+              <li>Readability</li>
+            </ul>
+
+          </li>
+
+          <li>Color Theory</li>
+        </ul>
+      </li>
+
+      <li>Layout Systems</li>
+    </ul>
   </section>
 
 </body>
