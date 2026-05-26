@@ -50,204 +50,171 @@ h1 {
 }
 
 /* =========================
-   BEFORE + AFTER
+   FLEXBOX MENU
 ========================= */
 
-.featured-title {
-  text-align: center;
-  font-size: 2rem;
-}
+.flex-menu {
+  display: flex;
 
-.featured-title::before {
-  content: "★ ";
+  justify-content: space-around;
+  align-items: center;
 
-  color: gold;
-}
-
-.featured-title::after {
-  content: " ★";
-
-  color: gold;
-}
-
-/* =========================
-   BLOCKQUOTE
-========================= */
-
-blockquote {
-  font-size: 1.5rem;
-
-  max-width: 700px;
-  margin: 0 auto;
-
-  position: relative;
-
-  padding: 20px 40px;
-
-  font-style: italic;
-}
-
-blockquote::before {
-  content: open-quote;
-
-  font-size: 4rem;
-
-  color: #cccccc;
-
-  position: absolute;
-
-  left: 0;
-  top: -10px;
-}
-
-blockquote::after {
-  content: close-quote;
-
-  font-size: 4rem;
-
-  color: #cccccc;
-
-  position: absolute;
-
-  right: 0;
-  bottom: -40px;
-}
-
-/* =========================
-   TYPOGRAPHIC DIVIDER
-========================= */
-
-.section-heading {
-  text-align: center;
-  font-size: 2rem;
-}
-
-.section-heading::before,
-.section-heading::after {
-  content: "";
-
-  display: inline-block;
-
-  width: 40px;
-  height: 2px;
-
-  background: black;
-
-  margin: 0 10px;
-
-  vertical-align: middle;
-}
-
-/* =========================
-   CUSTOM LIST
-========================= */
-
-.custom-list {
   list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.flex-menu li {
+  padding: 0.75rem 1.5rem;
+
+  background-color: #eeeeee;
+
+  border-radius: 8px;
+
+  transition: background-color 0.3s ease;
+}
+
+.flex-menu li:hover {
+  background-color: #d9d9d9;
+
+  cursor: pointer;
+}
+
+/* =========================
+   GRID LIST
+========================= */
+
+.grid-list {
+  display: grid;
+
+  grid-template-columns:
+    repeat(auto-fit, minmax(200px, 1fr));
+
+  gap: 1rem;
+
+  list-style: none;
+
   padding: 0;
 }
 
-.custom-list li {
-  margin-bottom: 1rem;
-}
+.grid-list li {
+  border: 2px solid #cccccc;
 
-.custom-list li::before {
-  content: "➤";
+  padding: 2rem;
 
-  color: #333;
+  text-align: center;
 
-  margin-right: 10px;
+  background-color: #fafafa;
 
-  font-weight: bold;
+  border-radius: 10px;
 }
 
 /* =========================
-   MARKER PSEUDO-ELEMENT
+   CSS COUNTERS
 ========================= */
 
-.marker-list {
+.counter-list {
+  list-style: none;
+
+  counter-reset: step;
+
   padding-left: 2rem;
 }
 
-.marker-list li::marker {
-  content: "◆ ";
+.counter-list li {
+  counter-increment: step;
 
-  color: crimson;
+  margin-bottom: 1rem;
 
-  font-size: 1.2em;
-}
-
-/* =========================
-   TIMELINE
-========================= */
-
-.timeline {
   position: relative;
-
-  list-style: none;
-
-  padding-left: 20px;
 }
 
-.timeline li {
-  position: relative;
+.counter-list li::before {
+  content: counter(step) ". ";
 
-  margin-bottom: 1.5rem;
-
-  padding-left: 20px;
-}
-
-.timeline li::before {
-  content: "";
-
-  position: absolute;
-
-  left: -10px;
-  top: 8px;
-
-  width: 10px;
-  height: 10px;
-
-  background: black;
-
-  border-radius: 50%;
-}
-
-/* =========================
-   OVERLAY EFFECT
-========================= */
-
-.overlay-box {
-  position: relative;
-
-  width: 300px;
-  height: 120px;
-
-  margin: 0 auto;
-
-  background: white;
-
-  border: 3px solid #172c66;
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
-
-  font-size: 1.5rem;
   font-weight: bold;
 
-  overflow: hidden;
-}
-
-.overlay-box::before {
-  content: "";
+  color: green;
 
   position: absolute;
 
-  width: 120%;
-  height: 120%;
+  left: -2rem;
+}
 
-  background: rgba(0, 128, 0, 0.15);
+/* =========================
+   MULTI-COLUMN LIST
+========================= */
 
-  transform: rotate(-8deg);
+.multi-column {
+  column-count: 3;
+
+  column-gap: 2rem;
+
+  list-style: square;
+}
+
+.multi-column li {
+  margin-bottom: 0.5rem;
+}
+
+/* =========================
+   ICON ALIGNMENT
+========================= */
+
+.icon-list {
+  list-style: none;
+
+  padding: 0;
+}
+
+.icon-list li {
+  display: flex;
+
+  align-items: center;
+
+  gap: 0.75rem;
+
+  margin-bottom: 1rem;
+}
+
+.icon-list li::before {
+  content: "✔";
+
+  color: #2ecc71;
+
+  font-weight: bold;
+}
+
+/* =========================
+   NESTED LISTS
+========================= */
+
+.nested-list ul {
+  margin-left: 1.5rem;
+}
+
+.nested-list ul {
+  list-style-type: circle;
+}
+
+.nested-list ul ul {
+  list-style-type: square;
+}
+
+/* =========================
+   RESPONSIVE MEDIA QUERY
+========================= */
+
+@media (max-width: 768px) {
+
+  .multi-column {
+    column-count: 1;
+  }
+
+  .flex-menu {
+    flex-direction: column;
+
+    gap: 1rem;
+  }
 }
